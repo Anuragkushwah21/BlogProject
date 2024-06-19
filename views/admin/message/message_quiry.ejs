@@ -1,0 +1,63 @@
+<%- include('../../header.ejs')%>
+<section class="dashboard-wrap mtb-40">
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="dash-left">
+            <ul>
+              <li class="active">
+                <a href="/admin/dashboard" class="active">Dashboard</a>
+              </li>
+              <li><a href="/admin/blog/displayblog">Blogs</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="/admin/message/message_quiry">Message</a></li>
+              <li><a href="./login">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <div class="dash-title">
+              <h1>New Message</h1>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>#ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+                <th>Action</th>
+              </tr>
+              <% m.forEach((message)=>{ %>
+              <tr>
+                <td><%= message._id %></td>
+                <td><%= message.name %></td>
+                <td><%= message.email %></td>
+                <td><%= message.phone%>"</td>
+                <td><%= message.message.slice(0,100) %></td>
+
+                <td>
+                  <a
+                    href="/message_view/<%= message.id %>"
+                    class="btn btn-primary btn-sm"
+                    ><i class="fa-solid fa-eye"></i
+                  ></a>
+                  <a
+                    href="/message_delete/<%= message.id %>"
+                    class="btn btn-danger btn-sm"
+                    ><i class="fa-solid fa-trash"></i
+                  ></a>
+                </td>
+              </tr>
+              <% }) %>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('../../footer.ejs')%>

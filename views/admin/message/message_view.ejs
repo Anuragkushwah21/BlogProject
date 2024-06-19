@@ -1,0 +1,52 @@
+<%- include('../../header.ejs')%>
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul>
+                            <li class="active"><a href="/admin/dashboard" class="active">Dashboard</a></li>
+                            <li><a href="/admin/blog/displayblog">Blogs</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="/admin/message/message_quiry">Message</a></li>
+                            <li><a href="./login">Logout</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                      <table class="table table-bordered table-striped">
+                        <tr>
+                          <th>#ID</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Message</th>
+                          <th>Action</th>
+                        </tr>
+                        <tr>
+                          <td><%= m._id %></td>
+                          <td><%= m.name %></td>
+                          <td><%= m.email %></td>
+                          <td><%= m.phone%>"</td>
+                          <td><%= m.message.slice(0,100) %></td>
+                    
+                          <td>
+                            <a
+                              href="/message_delete/<%= m.id %>"
+                              class="btn btn-danger btn-sm"
+                              ><i class="fa-solid fa-trash"></i></a
+                            >
+                          </td>
+                        </tr>
+                        </table>
+                    
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../../footer.ejs')%>

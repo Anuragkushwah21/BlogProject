@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>Registration Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-blue">
+      <div class="container">
+        <a class="navbar-brand" href="./index">
+          <img src="assets/images/logo.png" alt="Angular Project" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog_list">Blog</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="./login" class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="login-wrap mtb-40">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="login-box">
+              <h1>Administrator Registration</h1>
+              <% if(msg.length>0){%>
+                <div class="alert alert-danger">
+                  <%=msg%>
+                </div>
+  
+                <%}%>
+              <form action="insertReg" method="post">
+                <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    placeholder="Enter your username"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email address:</label>
+                  <input
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password:</label>
+                  <input
+                    name="confirmpassword"
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer h-1 bg-dark">
+      <p>
+        All Rights Reserved & &copy; 2024 by
+        <a href="https://fronts.ai/u/anuragkushwahakfreelancerpvtltdgwaliormp"
+          >Anurag Kushwah</a
+        >
+      </p>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
